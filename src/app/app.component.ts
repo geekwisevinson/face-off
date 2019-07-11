@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'face-off';
+
+  public getRandom() {
+
+    const randomNumber = Math.random() * 100;
+    console.log(randomNumber);
+  }
 }
