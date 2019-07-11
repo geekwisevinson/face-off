@@ -1,1 +1,26 @@
-<p>post-form works!</p>
+<div class="card align-items-center">
+  <img *ngIf="postImgSrc" [src]="postImgSrc" class="card-img-top img-responsive" alt="">
+  <div class="row">
+    <div class="col-xs-12">
+      <form >
+        <div class="form-group">
+          <label for="img">Img src</label>
+          <input
+            type="text"
+            class="form-control"
+            id="img"
+            [(ngModel)]="postImgSrc"
+            [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" id="description">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="row btn-group">
+  <button class="btn btn-primary">Post</button>
+</div>

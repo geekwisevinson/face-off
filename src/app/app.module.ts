@@ -12,6 +12,7 @@ import { PostFormComponent } from './shared/post-form/post-form.component';
 import { FeedComponent } from './shared/feed/feed.component';
 import { FeedItemComponent } from './shared/feed-item/feed-item.component';
 import { FriendListComponent } from './shared/friend-list/friend-list.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FriendListComponent } from './shared/friend-list/friend-list.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

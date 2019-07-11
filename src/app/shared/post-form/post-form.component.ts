@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostFormComponent implements OnInit {
 
+  public postImgSrc: string;
   constructor() { }
 
   ngOnInit() {
