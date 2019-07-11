@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FriendsService} from "../../services/friends.service";
 
 @Component({
   selector: 'geekwise-friend-list',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./friend-list.component.scss']
 })
 export class FriendListComponent implements OnInit {
-
-  constructor() { }
+  public friends = [];
+  constructor(private friendsService: FriendsService) { }
 
   ngOnInit() {
+    this.friendsService.friends.subscribe( list =>{
+      this.friends = list;
+    })
   }
 
 }

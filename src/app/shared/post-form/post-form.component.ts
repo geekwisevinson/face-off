@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FeedService} from "../../services/feed.service";
+import {Feed} from '../../models/feed.model'
 
 @Component({
   selector: 'geekwise-post-form',
@@ -8,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class PostFormComponent implements OnInit {
 
   public postImgSrc: string;
-  constructor() { }
+  public description: string;
+  constructor(private feedService: FeedService) { }
 
   ngOnInit() {
+    this.feedService.feeds.subscribe( list => {
+      console.log(list);
+    })
+  }
+
+  public postToForm() {
+    this.feedService.postToFeed(new Feed(this.postImgSrc, this.description));
+    this.postImgSrc  = '';
+    this.description = '';
   }
 
 }

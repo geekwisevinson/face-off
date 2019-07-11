@@ -1,1 +1,8 @@
-<p>friend-list works!</p>
+<div class="row list-group">
+  <ng-container *ngFor="let friend of friends">
+    <div class="list-group-item" *ngIf="friend.isOnline" >
+      {{friend.name}}
+    </div>
+  </ng-container>
+
+</div>

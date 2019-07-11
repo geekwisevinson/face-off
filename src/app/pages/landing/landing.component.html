@@ -9,15 +9,32 @@
         <form>
           <div class="input-group">
             <div class="input-group-text">
+              Img Path
+            </div>
+            <input type="text" class="form-control" id="description"
+                   [(ngModel)]="imgPath"
+                   [ngModelOptions]="{standalone: true}">
+            <div class="input-group-text">
+              Is Online
+            </div>
+            <input type="checkbox" class="form-control" id="description"
+                   [(ngModel)]="isOnline"
+                   [ngModelOptions]="{standalone: true}">
+
+            <div class="input-group-text">
               Username
             </div>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" id="description"
+                   [(ngModel)]="name"
+                   [ngModelOptions]="{standalone: true}">
             <div class="input-group-text">
-              Password
+              ID
             </div>
-            <input type="password" class="form-control">
+            <input type="text" class="form-control" id="description"
+                   [(ngModel)]="id"
+                   [ngModelOptions]="{standalone: true}">
             <div class="form-group">
-              <input value="Submit" type="text" class="btn float-right login_btn btn-success">
+              <input value="Submit" type="text" class="btn float-right login_btn btn-success" (click)="addUser()">
             </div>
           </div>
         </form>

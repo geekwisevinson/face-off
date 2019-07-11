@@ -1,1 +1,10 @@
-<p>feed works!</p>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let post of feed">
+    <img [src]="post.imgSrc" alt="" class="img-responsive">
+    {{post.description}}
+    <div class="btn-group">
+      <button class="btn" (click)="onLike(post)">Like: {{post.likes}}</button>
+      <button class="btn" (click)="onDislike(post)">Dislikes: {{post.dislikes}}</button>
+    </div>
+  </li>
+</ul>
