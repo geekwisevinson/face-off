@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  appName: 'Face 0ff'
+  appName: 'Face 0ff',
+  apiBase: 'https://connect2me.herokuapp.com/api-'
 };
 
 /*

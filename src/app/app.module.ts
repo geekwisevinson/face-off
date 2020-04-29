@@ -13,6 +13,7 @@ import { FeedComponent } from './shared/feed/feed.component';
 import { FeedItemComponent } from './shared/feed-item/feed-item.component';
 import { FriendListComponent } from './shared/friend-list/friend-list.component';
 import {FormsModule} from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
